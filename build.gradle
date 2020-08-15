@@ -20,6 +20,14 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+// SCA Gradle adapter settings
+
+apply plugin: 'java'
+allprojects {
+   tasks.withType(JavaCompile) {
+     task->
+       task.options.compilerArgs << '-parameters'
+       task.options.fork = true
+       task.options.forkOptions.executable = 'javac'
+ }
 }

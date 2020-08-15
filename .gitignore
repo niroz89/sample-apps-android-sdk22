@@ -38,3 +38,9 @@ Thumbs.db
 
 .bitrise*
 .idea
+
+# Fortify
+.bash_history
+fprcsv.csv
+hsperfdata_fortify
+result.fpr
